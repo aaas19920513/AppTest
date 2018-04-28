@@ -1,0 +1,7 @@
+---
+-
+ appPackage: com.taobao.taobao
+ appActivity: com.taobao.tao.welcome.Welcome
+ unicodeKeyboard: True
+ resetKeyboard: True
+ noReset: False

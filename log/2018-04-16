@@ -1,0 +1,115 @@
+2018-04-16 14:04:04,390 INFO start appium :p 4880 bp 4761 device:7d94ed7' 
+2018-04-16 14:04:25,207 INFO start appium :p 4886 bp 4709 device:838c7f53' 
+2018-04-16 14:04:43,743 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:04:43,743 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 14:04:48,743 INFO start appium :p 4883 bp 4783 device:838c7f53' 
+2018-04-16 14:05:06,819 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:05:06,819 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 14:05:11,829 INFO start appium :p 4703 bp 4715 device:838c7f53' 
+2018-04-16 14:05:29,956 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:05:29,957 ERROR Try restarting the appium :838c7f53,Trying the 3 frequency' 
+2018-04-16 14:05:34,957 INFO start appium :p 4775 bp 4710 device:838c7f53' 
+2018-04-16 14:05:53,025 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:05:53,026 ERROR Try restarting the appium :838c7f53,Trying the 4 frequency' 
+2018-04-16 14:05:58,035 INFO start appium :p 4825 bp 4836 device:838c7f53' 
+2018-04-16 14:06:21,081 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:06:21,082 ERROR Try restarting the appium :838c7f53,Trying the 5 frequency' 
+2018-04-16 14:06:26,092 INFO start appium :p 4849 bp 4748 device:838c7f53' 
+2018-04-16 14:06:44,213 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 14:06:44,213 ERROR Try restarting the appium :838c7f53,Trying the 6 frequency' 
+2018-04-16 14:06:49,221 ERROR Can not start appium, the program exits' 
+2018-04-16 15:38:24,693 INFO start appium :p 4786 bp 4774 device:7d94ed7' 
+2018-04-16 15:38:44,296 INFO start appium :p 4810 bp 4755 device:838c7f53' 
+2018-04-16 15:39:07,595 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 15:39:07,595 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 15:39:12,596 INFO start appium :p 4815 bp 4813 device:838c7f53' 
+2018-04-16 15:39:35,615 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 15:39:35,615 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 15:53:41,533 INFO start appium :p 4802 bp 4895 device:7d94ed7' 
+2018-04-16 15:53:58,845 INFO start appium :p 4796 bp 4823 device:838c7f53' 
+2018-04-16 15:54:21,921 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 15:54:21,921 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 15:54:26,924 INFO start appium :p 4829 bp 4792 device:838c7f53' 
+2018-04-16 15:54:45,039 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 15:54:45,039 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 15:59:10,227 INFO start appium :p 4899 bp 4863 device:7d94ed7' 
+2018-04-16 15:59:27,286 INFO start appium :p 4727 bp 4724 device:838c7f53' 
+2018-04-16 15:59:45,404 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 15:59:45,404 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 15:59:50,407 INFO start appium :p 4853 bp 4708 device:838c7f53' 
+2018-04-16 16:00:13,391 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 16:00:13,391 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 16:02:19,987 INFO start appium :p 4891 bp 4702 device:7d94ed7' 
+2018-04-16 16:02:36,940 INFO start appium :p 4791 bp 4821 device:838c7f53' 
+2018-04-16 16:02:59,927 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Command failed: C:\Windows\system32\cmd.exe /s /c "D:\test_soft\android-sdk\platform-tools\adb.exe -s 838c7f53 install "D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk""
+adb: failed to install D:\test_soft\Appium\node_modules\appium\build\unicode_ime_apk\UnicodeIME-debug.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+)
+' 
+2018-04-16 16:02:59,927 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+                                                                             2018-04-16 16:15:02,000 INFO start appium :p 4896 bp 4705 device:7d94ed7' 
+2018-04-16 16:15:22,153 INFO start appium :p 4807 bp 4789 device:838c7f53' 
+2018-04-16 16:15:39,375 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Device 838c7f53 was not in the list of connected devices)
+' 
+2018-04-16 16:15:39,375 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 16:15:44,375 INFO start appium :p 4748 bp 4734 device:838c7f53' 
+2018-04-16 16:16:01,589 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Device 838c7f53 was not in the list of connected devices)
+' 
+2018-04-16 16:16:01,589 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 16:16:27,063 INFO start appium :p 4813 bp 4844 device:7d94ed7' 
+2018-04-16 16:16:43,881 INFO start appium :p 4814 bp 4852 device:838c7f53' 
+2018-04-16 16:17:01,109 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Device 838c7f53 was not in the list of connected devices)
+' 
+2018-04-16 16:17:01,109 ERROR Try restarting the appium :838c7f53,Trying the 1 frequency' 
+2018-04-16 16:17:06,114 INFO start appium :p 4806 bp 4819 device:838c7f53' 
+2018-04-16 16:17:23,336 ERROR Failed to start appium :Message: A new session could not be created. (Original error: Device 838c7f53 was not in the list of connected devices)
+' 
+2018-04-16 16:17:23,336 ERROR Try restarting the appium :838c7f53,Trying the 2 frequency' 
+2018-04-16 16:19:02,247 INFO get device:7d94ed7,Android version:5.0.2' 
+2018-04-16 16:20:33,286 INFO start appium :p 4784 bp 4813 device:7d94ed7' 
+2018-04-16 16:53:11,980 INFO start appium :p 4740 bp 4852 device:7d94ed7' 
+2018-04-16 16:58:39,490 INFO get device:7d94ed7,Android version:5.0.2' 
+2018-04-16 17:11:12,819 INFO get device:7d94ed7,Android version:5.0.2' 
+2018-04-16 17:11:23,257 INFO get device:BUJN4DON4D8DFYGU,Android version:5.0' 
+2018-04-16 17:11:23,407 INFO get device:7d94ed7,Android version:5.0.2' 
+2018-04-16 17:13:28,030 INFO get device:BUJN4DON4D8DFYGU,Android version:5.0' 
+2018-04-16 17:13:28,141 INFO get device:7d94ed7,Android version:5.0.2' 
+2018-04-16 17:13:40,319 INFO start appium :p 4767 bp 4898 device:BUJN4DON4D8DFYGU' 
+2018-04-16 17:13:59,115 INFO start appium :p 4865 bp 4883 device:7d94ed7' 
+2018-04-16 17:22:10,321 INFO start appium :p 4725 bp 4716 device:BUJN4DON4D8DFYGU' 
+2018-04-16 17:22:27,983 INFO start appium :p 4895 bp 4877 device:7d94ed7' 
