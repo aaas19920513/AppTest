@@ -1,0 +1,39 @@
+# -*-coding:utf-8-*-
+import unittest
+import time, os
+from tomorrow import threads
+from public import HTMLTestRunner
+from po.RunParser import TestInit, RunTest
+from po import StartDriver
+import lib.Utils as U
+ini = U.ConfigIni()
+
+def get_rep_file():
+    result = ini.get_ini('test_case', 'report_file')
+    now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
+    day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    tdresult = result + '\\' + day
+    if not os.path.exists(tdresult):
+        os.mkdir(tdresult)
+    filename = tdresult + "\\" + now + "_result.html"
+    return filename
+
+
+@threads(5)
+def start(device):
+    suite = unittest.TestSuite()
+    suite.addTest(TestInit.parametrize(RunTest, device_l=device))
+    # return unittest.TextTestRunner(verbosity=2).run(suite)
+    return suite
+
+
+def run(testcases):
+    report_file = get_rep_file()
+    fp = file(report_file, 'wb+')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
+    runner.run(testcases)
+
+
+device_lists = StartDriver.get_device_info()
+for device in device_lists:
+    run(start(device))
