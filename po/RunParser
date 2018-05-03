@@ -30,8 +30,8 @@ class TestInit(unittest.TestCase):
     def __init__(self, methodName='runTest', device_l=None):
         super(TestInit, self).__init__(methodName)
         self.device_l = device_l
-        # self.driver = StartDriver.start(device_l)
-
+        TestInit.device_l = device_l
+        
     def runTest(self):
         pass
 
@@ -47,18 +47,13 @@ class TestInit(unittest.TestCase):
 
 class RunTest(TestInit):
 
-    # @classmethod
-    # def setUpClass(cls):
-    #     cls.driver = StartDriver.start(cls.device_l)
-    #     cls.driver.implicitly_wait(30)
-    #     cls.log = log.log()
-    #     cls.log.info('test start')
-    #     print "start"
-    def setUp(self):
-        self.driver = StartDriver.start(self.device_l)
-        self.driver.implicitly_wait(30)
-        self.log = log.log()
-        self.log.info('start')
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = StartDriver.start(cls.device_l)
+        cls.driver.implicitly_wait(30)
+        cls.log = log.log()
+        cls.log.info('test start')
+        print "start"
 
     def buildStep(self, keyword, tag=None, loc=None, param=None, wish=None):
         key = "\"" + keyword.lower() + "\""
@@ -116,9 +111,9 @@ class RunTest(TestInit):
                                 eval(step)
 
     @classmethod
-    def tearDownClass(self):
+    def tearDownClass(cls):
         print "End"
-        self.driver.quit()
+        cls.driver.quit()
 
     # def runTest(self):
     #     pass
