@@ -1,0 +1,31 @@
+# -*-coding:utf-8-*-
+from multiprocessing import Pool
+from public import GetDevice
+from po.RunParser import TestInit, RunTest
+from po import StartDriver
+import unittest
+import HTMLTestRunner
+from Run_excel import get_rep_file
+import os
+
+
+def run(device):
+    print "child process id is %d" % (os.getpid())
+    suite = unittest.TestSuite()
+    suite.addTest(TestInit.parametrize(RunTest, device_l=device))
+    unittest.TextTestRunner(verbosity=2).run(suite)
+    # report_file = get_rep_file()
+    # fp = file(report_file, 'wb+')
+    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
+    # runner.run(suite)
+
+if __name__ == '__main__':
+    print "Current process is %d" % (os.getpid())
+    p = Pool(4)
+    GetDevice.set_device_yaml()
+    device_list = StartDriver.get_device_info()
+    for device in device_list:
+        p.apply_async(run, args=(device,))
+    p.daemon = True
+    p.close()
+    p.join()
