@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+
+import os
+from public import locate
+
+def all_file_path(root_directory, extension_name):
+    """
+
+    :return: 遍历文件目录
+    """
+    project_path = os.path.split(os.path.realpath(__file__))[0]
+    project_path = project_path.replace('public', root_directory.strip('../'))
+    print project_path
+    file_list = []
+    for parent, dirnames, filenames in os.walk(root_directory):
+        for filename in filenames:
+            if 'filter' not in filename:
+                if filename.endswith(extension_name) and filename.__contains__('$') is False:
+                    print filename
+                    path = os.path.join(filename)
+                    file_list.append(project_path+'\\'+'\\'+path)
+    return file_list
+
+if __name__ == '__main__':
+    def _read_datas(filepath):
+        param_l = []
+        datas = locate.readxls(filepath, 2)
+        for data in datas:
+            param_l.append(data)
+        print param_l
+        return param_l
+    for k in all_file_path('../data', '.xlsx'):
+        _read_datas(k)
