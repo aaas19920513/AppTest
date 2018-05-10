@@ -8,14 +8,15 @@ from po import StartDriver
 import lib.Utils as U
 ini = U.ConfigIni()
 
-def get_rep_file():
+
+def get_rep_file(device):
     result = ini.get_ini('test_case', 'report_file')
     now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
     day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
     tdresult = result + '\\' + day
     if not os.path.exists(tdresult):
         os.mkdir(tdresult)
-    filename = tdresult + "\\" + now + "_result.html"
+    filename = tdresult + "\\" + now+'_ '+str(device) +".html"
     return filename
 
 
@@ -33,7 +34,24 @@ def run(testcases):
     runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
     runner.run(testcases)
 
+@threads(5)
+def run_device(device_l):
+    device = device_l['deviceName']
+    suite = unittest.TestSuite()
+    suite.addTest(TestInit.parametrize(RunTest, device_l=device_l))
+    report_file = get_rep_file(device)
+    fp = file(report_file, 'wb+')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
+    runner.run(suite)
 
-device_lists = StartDriver.get_device_info()
-for device in device_lists:
-    run(start(device))
+
+# device_lists = StartDriver.get_device_info()
+# for device in device_lists:
+#     # run(start(device))
+#     a = start(device)
+#     run(a)
+
+if __name__ == '__main__':
+    device_lists = StartDriver.get_device_info()
+    for device in device_lists:
+        run_device(device)
