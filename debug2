@@ -9,23 +9,35 @@ from Run_excel import get_rep_file
 import os
 
 
-def run(device):
+def run(device_l):
+    device = device_l['deviceName']
+    if device == '127.0.0.1:62001':
+        device = '127001'
     print "child process id is %d" % (os.getpid())
     suite = unittest.TestSuite()
-    suite.addTest(TestInit.parametrize(RunTest, device_l=device))
-    unittest.TextTestRunner(verbosity=2).run(suite)
-    # report_file = get_rep_file()
-    # fp = file(report_file, 'wb+')
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
-    # runner.run(suite)
+    suite.addTest(TestInit.parametrize(RunTest, device_l=device_l))
+    # test_result = unittest.TextTestRunner(verbosity=2).run(suite)
+    # print('All case number')
+    # print(test_result.testsRun)
+    # print('Failed case number')
+    # print(len(test_result.failures))
+    # print('Failed case and reason')
+    # print(test_result.failures)
+    # for case, reason in test_result.failures:
+    #     print case.id()
+    #     print reason
+    report_file = get_rep_file(device)
+    fp = file(report_file, 'wb+')
+    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u'自动化测试报告', description=u'用例执行情况：')
+    runner.run(suite)
 
 if __name__ == '__main__':
     print "Current process is %d" % (os.getpid())
     p = Pool(4)
     GetDevice.set_device_yaml()
     device_list = StartDriver.get_device_info()
-    for device in device_list:
-        p.apply_async(run, args=(device,))
+    for device_l in device_list:
+        p.apply_async(run, args=(device_l,))
     p.daemon = True
     p.close()
     p.join()
