@@ -1,0 +1,43 @@
+# -*-coding:utf-8-*-
+
+import lib.Utils as U
+import os
+from public import locate
+
+
+class GetCases(object):
+
+    def __init__(self, root_directory, extension_name):
+        self.root_directory = root_directory
+        self.extension_name = extension_name
+
+    def __all_file_path(self):
+
+        ini = U.ConfigIni()
+        project_path = ini.get_ini('project_path', 'path')
+        file_list = []
+        for parent, dirnames, filenames in os.walk(self.root_directory):
+            for filename in filenames:
+                if 'filter' not in filename:
+                    if filename.endswith(self.extension_name) and filename.__contains__('$') is False:
+                        path = os.path.join(filename)
+                        file_list.append(project_path + '/data/' + path)
+        return file_list
+
+    @staticmethod
+    def __file_cases(filepath):
+        cases = []
+        datas = locate.readxls(filepath, 2)
+        a = filepath
+        for data in datas:
+            data.append(a)
+            cases.append(data)
+        return cases
+
+    def main(self):
+        all_cases = []
+        for filepath in self.__all_file_path():
+            b = self.__file_cases(filepath)
+            for aa in b:
+                all_cases.append(aa)
+        return all_cases
