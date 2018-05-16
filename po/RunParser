@@ -109,7 +109,22 @@ class RunTest(TestInit):
                                 step = self.buildStep(key_word, param)
                                 print desc + ':' + step
                                 eval(step)
-
+    
+    def tearDown(self):
+    i = 0
+    while i < 10:
+        i = i + 1
+        try:
+            Action(self.driver).click("xpath", "//*[@text='首页']")
+            break
+        except:
+            ADB(self.device).send_key_event(4)
+            try:
+                Action(self.driver).click("xpath", "//*[@text='首页']")
+                break
+            except:
+                ADB(self.device).send_key_event(4)
+    
     @classmethod
     def tearDownClass(cls):
         print "End"
