@@ -1,0 +1,33 @@
+    from appium import webdriver
+    import time
+
+    desired_caps = {
+
+        'platformName': 'Android',
+
+        'deviceName': 'ceb44bd3',
+
+        'platformVersion': '5.0.2',
+
+        'appPackage': 'com.hsmja.royal_home',
+
+        'appActivity': 'com.whw.consumer.WelcomeActivity',
+
+        'unicodeKeyboard': True,
+
+        'resetKeyboard': True,
+        # 'chromeOptions': {
+        #     'androidProcess': 'WEBVIEW_com.hsmja.royal_home'
+        # }
+
+    }
+
+    driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+    driver.implicitly_wait(20)
+    b = driver.find_elements_by_id( 'com.hsmja.royal_home:id/tv_tab_title')[4]
+    b.click()
+    driver.find_element_by_id('com.hsmja.royal_home:id/mineWalletRl').click()
+    print driver.contexts
+    driver.switch_to.context('WEBVIEW_com.hsmja.royal_home')
+    time.sleep(10)
+    driver.find_element_by_class_name('text').click()
