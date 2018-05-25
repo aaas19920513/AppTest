@@ -26,7 +26,6 @@ def creat_suite():
 
 now = time.strftime('%Y-%m-%d-%H_%M_%S', time.localtime(time.time()))
 day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-# 定义个报告存放路径，支持相对路径
 tdresult = result + '\\' + day
 if not os.path.exists(tdresult):
     os.mkdir(tdresult)
